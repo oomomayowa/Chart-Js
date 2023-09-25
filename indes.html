@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CANVAS</title>
+    <style>
+      #myCanvas {
+        max-width: 700px;
+        height: 100%;
+        border: 2px solid rebeccapurple;
+      }
+      #myChart{
+        max-width: 700px;
+        height: 100%;
+        border: 2px solid rebeccapurple;
+
+      }
+    </style>
+  </head>
+  <body>
+      <center>
+          <canvas id="myCanvas"></canvas>
+          <canvas id="myChart"></canvas>
+
+      </center>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+        const xValues = ["Italy", "France", "Spain", "USA", "Argentina","Niger","China"];
+    const yValues = [55, 49, 44, 24, 15,10,8];
+    const barColors = ["red", "green","blue","orange","brown","purple","yellow"];
+
+      new Chart("myCanvas", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+            legend:{display:true},
+             title: {
+                 display: true,
+                     text: "World Wide Wine Production"
+    }
+  }
+});
+
+
+    </script>
+    <script>
+        const xyValues = [
+  {x:50, y:7},
+  {x:60, y:8},
+  {x:70, y:8},
+  {x:80, y:9},
+  {x:90, y:9},
+  {x:100, y:9},
+  {x:110, y:10},
+  {x:120, y:11},
+  {x:130, y:14},
+  {x:140, y:14},
+  {x:150, y:15}
+];
+
+new Chart("myChart", {
+  type: "scatter",
+  data: {
+    datasets: [{
+      pointRadius: 4,
+      pointBackgroundColor: "rgba(0,0,255,1)",
+      data: xyValues
+    }]
+  },
+  options:{}
+});
+    </script>
+    
+  </body>
+</html>
+
+
+table showing food import of nigeria 2022
